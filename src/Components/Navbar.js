@@ -27,18 +27,22 @@ function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <div className="navbar-container">
+        <div className="navbar-container ">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            TRVL
-            <i class="fab fa-typo3" />
+            <span style={{ color: "orange" }}>Happy</span> Birthday
+            <i class="fa fa-birthday-cake" aria-hidden="true"></i>
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                Home
+              <Link
+                to="/FavColor"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                FavColor
               </Link>
             </li>
             <li className="nav-item">
@@ -47,7 +51,7 @@ function Navbar() {
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Services
+                FavFood
               </Link>
             </li>
             <li className="nav-item">
@@ -56,21 +60,11 @@ function Navbar() {
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Products
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                to="/sign-up"
-                className="nav-links-mobile"
-                onClick={closeMobileMenu}
-              >
-                Sign Up
+                FavThings
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle="btn--outline">SIGN UP</Button>}
+          {button && <Button buttonStyle="btn--outline">Suprise</Button>}
         </div>
       </nav>
     </>
